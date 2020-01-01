@@ -1,0 +1,21 @@
+.ContentHeader{
+    background-color:rgb(216, 215, 215);
+}
+
+.ContentHeader ul{
+    list-style:none;
+    display:flex;
+    margin:0px auto;
+
+}
+
+.ContentHeader ul li {
+    padding:10px 20px;
+    font-size:14px;
+}
+
+.ContentHeader ul li:first-child{
+    font-weight:bold;
+    padding:10px 20px 10px 0px;
+}
+

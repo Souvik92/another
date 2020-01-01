@@ -1,0 +1,90 @@
+.PopularTopics{
+    height:128px;
+    position:relative;
+}
+
+.PopularTopics >div >div{
+    border:1px solid #a5adb9;
+    padding:14px 14px;
+    margin-bottom:10px;
+    margin-right:10px;
+    box-sizing:border-box;
+    height:54px;
+    font-size: 15px;
+    color: #505763;
+     
+}
+
+/*
+
+.right-arrow{
+    position:absolute;
+    background-color: white;
+    width:45px;
+    height:45px;
+    z-index: 3;
+    right: -10px;
+    top:45%;
+    margin-top:-22.5px;
+    border-radius:50%;
+    border-width: 0;
+    box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+}
+
+.left-arrow{
+    position:absolute;
+    background-color: white;
+    width:45px;
+    height:45px;
+    z-index:1;
+    left:-25px;
+    top:45%;
+    margin-top:-22.5px;
+    border-radius:50%;
+    border-width: 0;
+    box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+}
+
+.left-arrow span{
+    font-size:24px;
+    position:absolute;
+    left:12px;
+    top:10px;
+    color: #007791;
+    cursor: pointer;
+}
+
+.right-arrow span{
+    font-size:24px;
+    position:absolute;
+    left:15px;
+    top:10px;
+    color: #007791;
+    cursor: pointer;
+}*/ 
+
+/*@media (max-width: 580px){
+    .Card {
+        width: 335px;
+    }
+}
+
+@media (min-width: 768px){
+    .Card {
+        width: 250px;
+    }
+}
+
+@media (max-width: 992px){
+    .Card {
+        width: 242px;
+    }
+}
+
+
+
+@media (min-width:1200px){
+    .Card {
+        width: 230px;
+    }  
+}*/

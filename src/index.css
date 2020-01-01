@@ -1,13 +1,59 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /*font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;*/
+  font-size: 15px;
+  line-height: 1.43;
+  color: #29303b;
+  font-family: 'Open Sans', sans-serif;
+  margin:0px;
+  padding:0px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.right-arrow{
+  position:absolute;
+  background-color: white;
+  width:45px;
+  height:45px;
+  z-index: 3;
+  /*right:-webkit-calc(-100% - 10px);
+  right:-moz-calc(-100% - 10px);*/
+  right: -10px;
+  top:45%;
+  margin-top:-22.5px;
+  border-radius:50%;
+  border-width: 0;
+  box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
 }
+
+.left-arrow{
+  position:absolute;
+  background-color: white;
+  width:45px;
+  height:45px;
+  z-index:1;
+  left:-25px;
+  top:45%;
+  margin-top:-22.5px;
+  border-radius:50%;
+  border-width: 0;
+  box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+}
+
+.left-arrow span{
+  /*display:inline-block;*/
+  font-size:24px;
+  position:absolute;
+  left:12px;
+  top:10px;
+  color: #007791;
+  cursor: pointer;
+}
+
+.right-arrow span{
+  /*display:inline-block;*/
+  font-size:24px;
+  position:absolute;
+  left:15px;
+  top:10px;
+  color: #007791;
+  cursor: pointer;
+} 

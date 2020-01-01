@@ -1,0 +1,36 @@
+.AuthorsCourses {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width:320px;
+    background-color:green;
+    /*box-sizing:border-box;*/
+}
+
+.AuthorsCourses h2{
+    margin-top:3px;
+    margin-bottom:10px;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.47em;
+    color: #505763;
+}
+
+@media (min-width: 768px){
+    .AuthorsCourses {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px){
+    .AuthorsCourses {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px){
+    .AuthorsCourses {
+        width:1170px;
+    }  
+}
+

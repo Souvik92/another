@@ -1,0 +1,45 @@
+.Author{
+    
+    
+}
+
+
+.Author header{
+    background-color:#007791;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.43;
+}
+
+
+@media (min-width: 1200px){
+    .Author header>div{
+        width: 1000px;
+        margin:0px auto;        
+        padding: 34px 15px;
+        display: table;
+        table-layout: fixed;
+        box-sizing: border-box;
+    }
+
+    .Author h2{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.287;
+        margin: 7px 0 0;
+    }
+
+    .Author h1{
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1.287;
+        margin: 0;
+    }
+}
+
+
+.Author header>div{
+   
+
+}

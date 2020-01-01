@@ -1,10 +1,23 @@
 import React from 'react';
-import './App.css';
+import classes from'./App.css';
+import {Route,BrowserRouter} from 'react-router-dom';
+import Layout from '../src/Container/Layout/Layout';
+import AuthorsCourses from '../src/Container/AuthorsCourses/AuthorsCourses';
+import Author from '../src/Container/Author/Author'
 
-function App() {
+function App() {  
   return (
-    <div className='App'>
-      <h2>This is app js</h2>
+    <div>
+      <div className={classes.App}> 
+          <BrowserRouter>
+            <Layout>
+              <Route path="/" exact component={AuthorsCourses}/>
+              <Route path="/author/:id" component={Author}/>
+              {/*<Route path="/" exact component={}/>*/}
+
+            </Layout>
+            </BrowserRouter>
+        </div>
     </div>
   );
 }

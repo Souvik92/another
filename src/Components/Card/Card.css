@@ -1,0 +1,35 @@
+    .Card {
+        float: left;
+        height: 100%;
+        min-height: 1px;
+        /*outline: none;*/
+        width: calc(100%/2);
+        box-sizing: border-box;
+        /*position:relative;*/
+    }
+
+/*@media (min-width: 580px){
+    .Card {
+        width: 250px;
+    }
+}*/
+
+@media (min-width: 768px){
+    .Card {
+        width: 250px;
+    }
+}
+
+@media (min-width: 992px){
+    .Card {
+        width: 242px;
+    }
+}
+
+
+
+@media (min-width:1200px){
+    .Card {
+        width: 232px;
+    }  
+}
