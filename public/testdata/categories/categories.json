@@ -1,0 +1,44 @@
+[
+    {
+      "category": "Development",
+      "sub-category": "Web Development",
+      "topics": ["JavaScript", "Angular", "React", "CSS", "HTML5", "VueJS"]
+    },
+    {
+      "category": "Development",
+      "sub-category": "Data Science",
+      "topics": [
+        "Machine Learning",
+        "Python",
+        "Deep Learning",
+        "Data Analysis",
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "category": "Development",
+      "sub-category": "Mobile Apps",
+      "topics": [
+        "Android Development",
+        "iOS Development",
+        "Google Flutter",
+        "Swift"
+      ]
+    },
+    {
+      "category": "IT & Software",
+      "sub-category": "IT Certification",
+      "topics": ["AWS Certification", "Cisco CCNA"]
+    },
+    {
+      "category": "IT & Software",
+      "sub-category": "Network & Security",
+      "topics": ["Ethical Hacking", "Cyber Security", "Network Security"]
+    },
+    {
+      "category": "IT & Software",
+      "sub-category": "Operating Systems",
+      "topics": ["Linux", "Windows Server"]
+    }
+  ]
+  

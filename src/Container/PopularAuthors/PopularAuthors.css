@@ -1,7 +1,7 @@
 .PopularAuthors{
     height:280px;
     position:relative;
-    display:flex;
+    white-space:nowrap;
 }
 
 .PopularAuthors > div > div,.PopularAuthors >div>a>div{
@@ -39,8 +39,8 @@
        color: #29303b;
        margin-bottom:4px;
        text-overflow: ellipsis;
-       white-space: normal;
-       overflow: hidden;  
+       /*white-space: normal;*/
+       overflow: hidden; 
     }
 
     .decoratingCard {

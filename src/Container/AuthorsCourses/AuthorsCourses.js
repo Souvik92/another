@@ -40,6 +40,93 @@ class AuthorsCourses extends Component {
         "topics": ["Angular", "React", "ReactHooks", "JavaScript"]
       },
       {
+        "name": "Maximilian Schwarzmüller",
+        "title": "Web Developer, Designer, and Teacher",
+        "social": {
+          "website": "https://academind.com/",
+          "twitter": "https://twitter.com/maxedapps",
+          "youTube": "https://www.youtube.com/c/academind"
+        },
+        "description": {
+          "intro": "Starting out at the age of 13 I never stopped learning new programming skills and languages. Early I started creating websites for friends and just for fun as well. Besides web development I also explored Python and other non-web-only languages. This passion has since lasted and lead to my decision of working as a freelance web developer and consultant. The success and fun I have in this job is immense and really keeps that passion burningly alive.",
+          "skills": "Starting web development on the backend (PHP with Laravel, NodeJS, Python) I also became more and more of a frontend developer using modern frameworks like React, Angular or VueJS 2 in a lot of projects. I love both worlds nowadays!",
+          "important": "As a self-taught professional I really know the hard parts and the difficult topics when learning new or improving on already-known languages. This background and experience enables me to focus on the most relevant key concepts and topics. My track record of many 5-star rated courses, more than 700,000 students on Udemy as well as a successful YouTube channel is the best proof for that."
+        },
+        "topics": ["Angular", "React", "ReactHooks", "JavaScript"]
+      },
+      {
+        "name": "Maximilian Schwarzmüller",
+        "title": "Web Developer, Designer, and Teacher",
+        "social": {
+          "website": "https://academind.com/",
+          "twitter": "https://twitter.com/maxedapps",
+          "youTube": "https://www.youtube.com/c/academind"
+        },
+        "description": {
+          "intro": "Starting out at the age of 13 I never stopped learning new programming skills and languages. Early I started creating websites for friends and just for fun as well. Besides web development I also explored Python and other non-web-only languages. This passion has since lasted and lead to my decision of working as a freelance web developer and consultant. The success and fun I have in this job is immense and really keeps that passion burningly alive.",
+          "skills": "Starting web development on the backend (PHP with Laravel, NodeJS, Python) I also became more and more of a frontend developer using modern frameworks like React, Angular or VueJS 2 in a lot of projects. I love both worlds nowadays!",
+          "important": "As a self-taught professional I really know the hard parts and the difficult topics when learning new or improving on already-known languages. This background and experience enables me to focus on the most relevant key concepts and topics. My track record of many 5-star rated courses, more than 700,000 students on Udemy as well as a successful YouTube channel is the best proof for that."
+        },
+        "topics": ["Angular", "React", "ReactHooks", "JavaScript"]
+      },
+      {
+        "name": "Maximilian Schwarzmüller",
+        "title": "Web Developer, Designer, and Teacher",
+        "social": {
+          "website": "https://academind.com/",
+          "twitter": "https://twitter.com/maxedapps",
+          "youTube": "https://www.youtube.com/c/academind"
+        },
+        "description": {
+          "intro": "Starting out at the age of 13 I never stopped learning new programming skills and languages. Early I started creating websites for friends and just for fun as well. Besides web development I also explored Python and other non-web-only languages. This passion has since lasted and lead to my decision of working as a freelance web developer and consultant. The success and fun I have in this job is immense and really keeps that passion burningly alive.",
+          "skills": "Starting web development on the backend (PHP with Laravel, NodeJS, Python) I also became more and more of a frontend developer using modern frameworks like React, Angular or VueJS 2 in a lot of projects. I love both worlds nowadays!",
+          "important": "As a self-taught professional I really know the hard parts and the difficult topics when learning new or improving on already-known languages. This background and experience enables me to focus on the most relevant key concepts and topics. My track record of many 5-star rated courses, more than 700,000 students on Udemy as well as a successful YouTube channel is the best proof for that."
+        },
+        "topics": ["Angular", "React", "ReactHooks", "JavaScript"]
+      },
+      {
+        "name": "Stephen Grider",
+        "title": "Engineering Architect",
+        "social": {
+          "twitter": "https://twitter.com/ste_grider",
+          "youTube": "https://www.youtube.com/channel/UCQCaS3atWyNHEy5PkDXdpNg"
+        },
+        "description": {
+          "intro": "Stephen Grider has been building complex Javascript front ends for top corporations in the San Francisco Bay Area.",
+          "skills": "With an innate ability to simplify complex topics, Stephen has been mentoring engineers beginning their careers in software development for years, and has now expanded that experience onto Udemy, authoring the highest rated React course. He teaches on Udemy to share the knowledge he has gained with other software engineers.",
+          "important": "Invest in yourself by learning from Stephen's published courses."
+        },
+        "topics": ["Angular", "JavaScript"]
+      },
+      {
+        "name": "Stephen Grider",
+        "title": "Engineering Architect",
+        "social": {
+          "twitter": "https://twitter.com/ste_grider",
+          "youTube": "https://www.youtube.com/channel/UCQCaS3atWyNHEy5PkDXdpNg"
+        },
+        "description": {
+          "intro": "Stephen Grider has been building complex Javascript front ends for top corporations in the San Francisco Bay Area.",
+          "skills": "With an innate ability to simplify complex topics, Stephen has been mentoring engineers beginning their careers in software development for years, and has now expanded that experience onto Udemy, authoring the highest rated React course. He teaches on Udemy to share the knowledge he has gained with other software engineers.",
+          "important": "Invest in yourself by learning from Stephen's published courses."
+        },
+        "topics": ["Angular", "JavaScript"]
+      },
+      {
+        "name": "Stephen Grider",
+        "title": "Engineering Architect",
+        "social": {
+          "twitter": "https://twitter.com/ste_grider",
+          "youTube": "https://www.youtube.com/channel/UCQCaS3atWyNHEy5PkDXdpNg"
+        },
+        "description": {
+          "intro": "Stephen Grider has been building complex Javascript front ends for top corporations in the San Francisco Bay Area.",
+          "skills": "With an innate ability to simplify complex topics, Stephen has been mentoring engineers beginning their careers in software development for years, and has now expanded that experience onto Udemy, authoring the highest rated React course. He teaches on Udemy to share the knowledge he has gained with other software engineers.",
+          "important": "Invest in yourself by learning from Stephen's published courses."
+        },
+        "topics": ["Angular", "JavaScript"]
+      },
+      {
         "name": "Stephen Grider",
         "title": "Engineering Architect",
         "social": {
@@ -135,13 +222,13 @@ class AuthorsCourses extends Component {
                     <PopularInstructors authors={this.state.authors} activateAuthor={(id) => this.showAuthorHandle(id)}/>
                 </div>
             </div>};*/}
-            <div style={{'background-color':'yellow','marginTop':'30px'}}>
+            <div style={{'backgroundColor':'yellow','marginTop':'30px'}}>
                 <h2>Popular topics</h2>
-                <PopularTopics />
+                <PopularTopics categories={this.state.categories}/>
             </div>
-            <div style={{'background-color':'pink','marginTop':'30px'}}>
+            <div style={{'backgroundColor':'pink','marginTop':'30px'}}>
                 <h2>Popular Instructors</h2>
-                <PopularAuthors />
+                <PopularAuthors authors={this.state.authors} />
             </div>
             
         </div>

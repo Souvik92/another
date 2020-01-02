@@ -5,23 +5,31 @@ import styles from '../../index.css';
 import {Link} from 'react-router-dom';
 
 class PopularAuthor extends Component{
-    render(){
-        return(
-            <div className={classes.PopularAuthors} style={{'backgroundColor':'yellow'}}>
-                <div className={styles['left-arrow']}>
-                   <span class="fa fa-chevron-left"></span>
-                </div>
-                <Card>
-                    <Link to={'/author/1'/*+author.name*/}>
-                        <div>
+    constructor(props){
+        super(props);
+        this.inputElement = React.createRef();
+    }
 
-                        {/*<img src={require('../../../images/tutors/'+props.author.name.split(" ").join('').toLowerCase()+'.jpg')} alt="not available" />*/}
-                            <img src={require('../../Assets/AuthorImages/jonasschmedtmann.jpg')} alt="not available" />
+    callMe = () =>{
+        //console.log(this.myRef.current.clientWidth);
+        console.log(this.inputElement.current.clientWidth);
+        
+    }
+
+
+    render(){
+        const authorsHTML = this.props.authors.map(el => {
+            return (
+                <Card myRef={this.inputElement} >
+                    <Link to={'/author/1'/*+author.name*/}>
+                        <div >
+                            <img  src={require('../../Assets/AuthorImages/'+el.name.split(" ").join('').toLowerCase()+'.jpg')} alt="not available" />
+                            {/*<img src={require('../../Assets/AuthorImages/jonasschmedtmann.jpg')} alt="not available" />*/}
                             <div className={classes.decoratingCard}>
-                                <h3>Alex </h3>
+                                <h3>{el.name}</h3>
                                 <div>
                                     <div>
-                                        Python,machineLearning,khsvds
+                                        {el.title}
                                     </div>
                                     <div>
                                         <p>1,405,103 students</p>
@@ -32,26 +40,15 @@ class PopularAuthor extends Component{
                         </div>
                     </Link>
                 </Card>
-                <Card>
-                    <div>
-                        this is 
-                    </div>
-                </Card>
-                <Card>
-                    <div>
-                        this is 
-                    </div>
-                </Card>
-                <Card>
-                    <div>
-                        this is 
-                    </div>
-                </Card>
-                <Card>
-                    <div>
-                        this is 
-                    </div>
-                </Card>
+            )
+        }) 
+
+        return(
+            <div className={classes.PopularAuthors} style={{'backgroundColor':'yellow'}}>
+                <div onClick={this.callMe} className={styles['left-arrow']}>
+                   <span class="fa fa-chevron-left"></span>
+                </div>
+                {authorsHTML}
                 <div className={styles['right-arrow']}>
                     <span class="fa fa-chevron-right" ></span>
                 </div>

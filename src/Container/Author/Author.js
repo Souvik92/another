@@ -1,8 +1,11 @@
 import React,{Component} from 'react';
 import classes from './Author.css';
+import axios from 'axios';
+import jsonItem from '../../testdata/author/1.json';
+import Aux from '../../HOC/Auxilliary/Auxilliary'
 
 class Author extends Component{
-    state={
+   state={
         author:{
             "name": "Jonas Schmedtmann",
             "title": "Academind by Maximilian Schwarzmüller",
@@ -19,7 +22,20 @@ class Author extends Component{
         }
     }
 
- 
+    
+    /*componentWillMount = () => {
+        axios.get('../../../testdata/author/1.json').then((res) => {
+            this.setState({author:res.data})
+            console.log(this.state.author);
+        });
+    }
+
+    /*componentDidMount = () =>{
+        axios.get('../../../testdata/author/1.json').then((res) => {
+            this.setState({authors:res.data})
+            console.log(res.data);
+        });
+    }*/
 
     render(){
         const getIcons =() => {
@@ -43,8 +59,11 @@ class Author extends Component{
             return arrItems;
         }
 
-        return(
-            <div className={classes.Author}>
+        let authorHTML = null;
+
+        if(this.state.author){
+            authorHTML=(
+                <Aux>
                     <header>
                         <div>
                             <h1>{this.state.author.name}</h1>
@@ -75,7 +94,15 @@ class Author extends Component{
                                 <p>211.447</p>
                             </div>
                         </footer>
-                    </div>             
+                    </div> 
+                </Aux>
+
+            )
+        }
+
+        return(
+            <div className={classes.Author}>
+                   {authorHTML}            
             </div>
         )
     }
