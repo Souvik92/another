@@ -30,6 +30,22 @@ class Populartopics extends Component {
                     <div>this is first div</div>
                     <div>this is 2nd</div>
                 </Card>
+                <Card>
+                    <div>this is first div</div>
+                    <div>this is 2nd</div>
+                </Card>
+                <Card>
+                    <div>this is first div</div>
+                    <div>this is 2nd</div>
+                </Card>
+                <Card>
+                    <div>this is first div</div>
+                    <div>this is 2nd</div>
+                </Card>
+                <Card>
+                    <div>this is first div</div>
+                    <div>this is 2nd</div>
+                </Card>
                 <div className={styles['right-arrow']}>
                     <span class="fa fa-chevron-right" ></span>
                 </div>

@@ -18,7 +18,31 @@ class Author extends Component{
             "topics": ["JavaScript", "CSS"]
         }
     }
+
+ 
+
     render(){
+        const getIcons =() => {
+            
+            let arrKeys = Object.keys(this.state.author.social);
+            // for (let i in props.author.social){
+            //   arrIcons.push({i:props.author.social[i]});
+            // }
+            let arrItems = arrKeys.map(el =>{
+              if(el.toLowerCase() ==='website'){
+                return (<a key={el} href={this.state.author.social[el]}><i className="fa fa-globe" style={{"fontSize":"24px","color":"#007791"}}></i></a>)
+              }
+              else if(el.toLowerCase() ==='twitter'){
+                return (<a key={el} href={this.state.author.social[el]}><i className="fa fa-twitter" style={{"fontSize":"24px","color":"#007791"}}></i></a>)
+              }else if(el.toLowerCase() ==='youtube'){
+                return (<a key={el} href={this.state.author.social[el]}><i className="fa fa-youtube" style={{"fontSize":"24px","color":"#007791"}}></i></a>)
+              }else {
+                return (<a key={el} href={this.state.author.social[el]}><i className="fa fa-facebook" style={{"fontSize":"24px","color":"#007791"}}></i></a>)
+              }
+            })
+            return arrItems;
+        }
+
         return(
             <div className={classes.Author}>
                     <header>
@@ -28,7 +52,29 @@ class Author extends Component{
                         </div>                    
                     </header>
                     <div>
-                        
+                        <aside>
+                            <img src={require('../../Assets/AuthorImages/'+this.state.author.name.split(" ").join('').toLowerCase()+'.jpg')} alt="not available" />
+                            <div>{getIcons()}</div>
+                        </aside >
+                        <article>
+                            <p>{this.state.author.description.intro}</p>
+                            <p>{this.state.author.description.skills}</p>
+                            <p>{this.state.author.description.important}</p>
+                        </article>
+                        <footer>
+                            <div>
+                                <h3>Total students</h3>
+                                <p>680,272</p>
+                            </div>
+                            <div>
+                                <h3> Courses</h3>
+                                <p>9</p>
+                            </div>
+                            <div>
+                                <h3> Reviews</h3>
+                                <p>211.447</p>
+                            </div>
+                        </footer>
                     </div>             
             </div>
         )

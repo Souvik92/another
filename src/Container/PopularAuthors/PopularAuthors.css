@@ -1,6 +1,7 @@
 .PopularAuthors{
     height:280px;
     position:relative;
+    display:flex;
 }
 
 .PopularAuthors > div > div,.PopularAuthors >div>a>div{

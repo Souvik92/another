@@ -1,6 +1,7 @@
 .PopularTopics{
     height:128px;
     position:relative;
+    white-space:nowrap;
 }
 
 .PopularTopics >div >div{
