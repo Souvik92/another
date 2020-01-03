@@ -5,12 +5,12 @@ import classes from './ContentHeader.css';
 
 const contentHeader = (props) => {
     const elements = props.categories.map(el => {
-        return <li key={el["sub-category"]}>{el["sub-category"]}</li>
+        return <li key={el["sub-category"]}><span className='fa fa-file-code-o'></span>{el["sub-category"]}</li>
     })
     return (
         <div className={classes.ContentHeader}>
             <ul>
-                <li>{props.categories[0].category}</li>
+                <li><span className='fa fa-file-code-o'></span>{props.categories[0].category}</li>
                 {elements}
             </ul>
         </div>

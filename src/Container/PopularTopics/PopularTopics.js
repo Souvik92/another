@@ -31,7 +31,9 @@ class Populartopics extends Component {
             })
         });
 
-        let finalHTML = elHTML.map(elements =>{
+        let allHTML = elHTML.splice(0,5)
+
+        let finalHTML = allHTML.map(elements =>{
             return (
                 <Card>
                     <div>{elements[0]}</div>

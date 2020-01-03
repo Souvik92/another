@@ -1,21 +1,36 @@
 .ContentHeader{
-    background-color:rgb(216, 215, 215);
+    background-color:#f7f8fa;
+    flex: 1;
+    min-width: 1px;
+    min-height: 44px;
+    overflow: hidden;
+    position: relative;
+    padding:0px 50px;
 }
 
 .ContentHeader ul{
     list-style:none;
-    display:flex;
-    margin:0px auto;
-
+    align-self:flex-start;
+    display:flex
 }
 
 .ContentHeader ul li {
-    padding:10px 20px;
-    font-size:14px;
+    font-size:13px;
+    padding:0px 20px;
+    color: #686f7a;
+}
+
+.ContentHeader ul li span{
+    padding:0px 5px;
+    display:inline-block;
 }
 
 .ContentHeader ul li:first-child{
-    font-weight:bold;
-    padding:10px 20px 10px 0px;
+    font-weight:700;
+    font-size: 15px;
 }
 
+.ContentHeader ul li:hover {
+    /*background-color: #494b50;*/
+    cursor:pointer;
+}

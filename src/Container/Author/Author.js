@@ -5,7 +5,7 @@ import jsonItem from '../../testdata/author/1.json';
 import Aux from '../../HOC/Auxilliary/Auxilliary'
 
 class Author extends Component{
-   state={
+   /*state={
         author:{
             "name": "Jonas Schmedtmann",
             "title": "Academind by Maximilian Schwarzmüller",
@@ -20,7 +20,7 @@ class Author extends Component{
             },
             "topics": ["JavaScript", "CSS"]
         }
-    }
+    }*/
 
     
     /*componentWillMount = () => {
@@ -28,22 +28,22 @@ class Author extends Component{
             this.setState({author:res.data})
             console.log(this.state.author);
         });
+    }*/
+    state ={
+        author:null
     }
 
-    /*componentDidMount = () =>{
+    componentDidMount = () =>{
         axios.get('../../../testdata/author/1.json').then((res) => {
-            this.setState({authors:res.data})
+            this.setState({author:res.data.author})
             console.log(res.data);
         });
-    }*/
+    }
 
     render(){
         const getIcons =() => {
             
             let arrKeys = Object.keys(this.state.author.social);
-            // for (let i in props.author.social){
-            //   arrIcons.push({i:props.author.social[i]});
-            // }
             let arrItems = arrKeys.map(el =>{
               if(el.toLowerCase() ==='website'){
                 return (<a key={el} href={this.state.author.social[el]}><i className="fa fa-globe" style={{"fontSize":"24px","color":"#007791"}}></i></a>)

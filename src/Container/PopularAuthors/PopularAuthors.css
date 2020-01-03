@@ -1,20 +1,20 @@
 .PopularAuthors{
-    height:280px;
+    height:300px;
     position:relative;
     white-space:nowrap;
 }
 
 .PopularAuthors > div > div,.PopularAuthors >div>a>div{
-    border:1px solid #a5adb9;
+    border:1px solid #d9dce2;
     padding:25px 15px;
     margin-bottom:10px;
     margin-right:10px;
     box-sizing:border-box;
-    height:270px;
+    height:290px;
     font-size: 15px;
     color: #505763;
     text-align:center;
-     
+    box-shadow:0px 2px 1px #d9dce2;     
 }
 
 .PopularAuthors a{
@@ -46,7 +46,6 @@
     .decoratingCard {
         text-align:center;
         font-size: 13px;
-        
     }
 
     .decoratingCard>div>div:first-child{
@@ -54,7 +53,7 @@
         white-space: normal;
         overflow: hidden;        
         height: 36px;
-        margin-bottom:25px;
+        margin-bottom:40px;
     }
 
     .decoratingCard p{

@@ -8,12 +8,13 @@ class PopularAuthor extends Component{
     constructor(props){
         super(props);
         this.inputElement = React.createRef();
+        this.state = {
+            totalElements:this.props.authors.length,
+        }
     }
 
     callMe = () =>{
-        //console.log(this.myRef.current.clientWidth);
-        console.log(this.inputElement.current.clientWidth);
-        
+        console.log(this.inputElement.current.clientWidth);        
     }
 
 
@@ -43,8 +44,8 @@ class PopularAuthor extends Component{
             )
         }) 
 
-        return(
-            <div className={classes.PopularAuthors} style={{'backgroundColor':'yellow'}}>
+        return( 
+            <div className={classes.PopularAuthors} /*s tyle={{'backgroundColor':'yellow'}}*/>
                 <div onClick={this.callMe} className={styles['left-arrow']}>
                    <span class="fa fa-chevron-left"></span>
                 </div>

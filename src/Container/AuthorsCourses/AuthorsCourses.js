@@ -5,10 +5,11 @@ import ContentHeader from '../../Components/ContentHeader/ContentHeader';
 import classes from './AuthorsCourses.css'
 import PopularTopics from '../PopularTopics/PopularTopics';
 import PopularAuthors from '../../Container/PopularAuthors/PopularAuthors';
+import axios from 'axios';
 //import AuthorComponent from '../../Components/AuthorComponent/AuthorContainer';
 
 class AuthorsCourses extends Component {
-  state={
+  /*state={
     authors:[
       {
         "name": "Jonas Schmedtmann",
@@ -186,6 +187,11 @@ class AuthorsCourses extends Component {
     ],
     headerInfo:null,
     authorID:null
+  }*/
+
+  state={
+    authors:[],
+    categories:[]
   }
 
   myName = () => {
@@ -197,6 +203,18 @@ class AuthorsCourses extends Component {
     
   }
 
+  componentDidMount = () =>{
+    axios.get('../../../testdata/authors/authors.json').then((res) => {
+      this.setState({authors:res.data})
+      console.log(res.data)
+    });
+
+    axios.get('../../../testdata/categories/categories.json').then((res) => {
+      this.setState({categories:res.data})
+      console.log(res.data)
+    });
+}
+
   showAuthorHandle = (id) => {
     let author =this.state.authors.find(author => author.name === id);
     console.log(author.name);
@@ -206,8 +224,10 @@ class AuthorsCourses extends Component {
   }
   
   render() {
-    return (
-        <div className={classes.AuthorsCourses}>
+    let authorsCoursesHTML = null;
+    if((this.state.categories.length > 0) && (this.state.authors.length > 0)){
+      authorsCoursesHTML = (
+        <Aux>
             <ContentHeader categories={this.state.categories} />
             {/*<div>
                 <ContentHeader categories={this.state.categories} />
@@ -222,16 +242,26 @@ class AuthorsCourses extends Component {
                     <PopularInstructors authors={this.state.authors} activateAuthor={(id) => this.showAuthorHandle(id)}/>
                 </div>
             </div>};*/}
-            <div style={{'backgroundColor':'yellow','marginTop':'30px'}}>
-                <h2>Popular topics</h2>
-                <PopularTopics categories={this.state.categories}/>
-            </div>
-            <div style={{'backgroundColor':'pink','marginTop':'30px'}}>
-                <h2>Popular Instructors</h2>
-                <PopularAuthors authors={this.state.authors} />
+            <div className={classes.AuthorsCourses}>
+              <div /*style={{'backgroundColor':'yellow'}}*/>
+                  <h2>Popular topics</h2>
+                  <PopularTopics categories={this.state.categories}/>
+              </div>
+              <div style={{/*'backgroundColor':'pink',*/'marginTop':'30px'}}>
+                  <h2>Popular Instructors</h2>
+                  <PopularAuthors authors={this.state.authors} />
+              </div>
             </div>
             
-        </div>
+        </Aux>
+
+      )
+    }
+    return (
+      <Aux>         
+            {authorsCoursesHTML}
+      </Aux>
+        
     );
   }
 }
