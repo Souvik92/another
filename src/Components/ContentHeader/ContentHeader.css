@@ -1,17 +1,24 @@
 .ContentHeader{
     background-color:#f7f8fa;
-    flex: 1;
     min-width: 1px;
     min-height: 44px;
     overflow: hidden;
     position: relative;
-    padding:0px 50px;
 }
 
+.ContentHeader div{
+    max-width:1170px;
+    margin:0px auto;
+    top:10px;
+    position:relative;
+    
+}
 .ContentHeader ul{
     list-style:none;
-    align-self:flex-start;
-    display:flex
+    justify-content: space-between;
+    display:flex;
+    padding:0px;
+    margin:0px;
 }
 
 .ContentHeader ul li {
@@ -28,9 +35,11 @@
 .ContentHeader ul li:first-child{
     font-weight:700;
     font-size: 15px;
+    padding:0px 20px 0px 0px;
 }
 
 .ContentHeader ul li:hover {
     /*background-color: #494b50;*/
     cursor:pointer;
+    /*color:white;*/
 }

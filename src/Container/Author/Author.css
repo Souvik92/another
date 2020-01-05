@@ -1,7 +1,6 @@
-/*.Author{
+.Author{
     
-    
-}*/
+}
 
 
 .Author header{
@@ -10,6 +9,11 @@
     margin: 0;
     padding: 0;
     line-height: 1.43;
+}
+
+.Author >div{
+    display:flex;
+    padding:25px 0px 0px 0px
 }
 
 
@@ -43,10 +47,16 @@
     }
 
     .Author aside{
-        width:25%;
-        float:left;
-        height:200px;
+        width:250px;
         text-align: center;
+        
+    }
+
+    .Author aside >div{
+        width:100px;
+        display:flex;
+        justify-content:space-around;
+        margin:0px auto;
         
     }
 
@@ -55,7 +65,7 @@
         width:120px;
         border-radius:50%;
         border:0px;
-        display:block;
+        /*display:block;*/
         margin:0px auto 20px;
     }
 

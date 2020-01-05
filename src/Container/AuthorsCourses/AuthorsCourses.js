@@ -191,16 +191,38 @@ class AuthorsCourses extends Component {
 
   state={
     authors:[],
-    categories:[]
+    categories:[],
+    noOfElements:0
   }
 
-  myName = () => {
+  /*myName = () => {
     let arr = [];
     arr.push(this.state.categories.map(el => {
        return el["sub-category"];
     }));
     this.setState({headerInfo:arr});
     
+  }*/
+
+  static getDerivedStateFromProps(props,state){
+    let windowWidth = document.getElementsByTagName('BODY')[0].clientWidth;
+   
+    let upperLimit = 0;
+    if(windowWidth>1200){
+      upperLimit  = 5
+    }else if(windowWidth>992){
+      upperLimit = 4
+    }else if(windowWidth>768){
+      upperLimit =3
+    }else{
+    upperLimit =2
+    }
+    console.log(upperLimit);
+    console.log('hfsdhfshdfh');
+    state={
+      noOfElements : upperLimit
+    }
+    return state;
   }
 
   componentDidMount = () =>{
@@ -213,6 +235,12 @@ class AuthorsCourses extends Component {
       this.setState({categories:res.data})
       console.log(res.data)
     });
+
+    window.addEventListener('resize',this.setNoOfElements);
+}
+
+componentWillUnmount() {
+  window.removeEventListener('resize', null);
 }
 
   showAuthorHandle = (id) => {
@@ -221,6 +249,31 @@ class AuthorsCourses extends Component {
     if(author){
       this.setState({AuthorID:author});
      }
+  }
+
+  setNoOfElements= () => {
+    let windowWidth = document.getElementsByTagName('BODY')[0].clientWidth;    
+    let upperLimit = 0;
+     if(windowWidth>1200){
+       upperLimit  = 5
+     }else if(windowWidth>992){
+       upperLimit = 4
+     }else if(windowWidth>768){
+       upperLimit =3
+     }else{
+     upperLimit =2
+     }
+     this.setState({noOfElements : upperLimit});
+
+    /*if(width > 250){
+      this.setState({noOfElements:2})
+    }else if(width == 250){
+      this.setState({noOfElements:3})
+    }else if(width == 242){
+      this.setState({noOfElements:4})
+    }else if(width >= 234){
+      this.setState({noOfElements:5})
+    }*/
   }
   
   render() {
@@ -245,11 +298,11 @@ class AuthorsCourses extends Component {
             <div className={classes.AuthorsCourses}>
               <div /*style={{'backgroundColor':'yellow'}}*/>
                   <h2>Popular topics</h2>
-                  <PopularTopics categories={this.state.categories}/>
+                  <PopularTopics categories={this.state.categories} noOfElements={this.state.noOfElements}/>
               </div>
               <div style={{/*'backgroundColor':'pink',*/'marginTop':'30px'}}>
                   <h2>Popular Instructors</h2>
-                  <PopularAuthors authors={this.state.authors} />
+                  <PopularAuthors authors={this.state.authors} noOfElements={this.state.noOfElements} />
               </div>
             </div>
             

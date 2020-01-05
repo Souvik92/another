@@ -1,0 +1,71 @@
+.HeaderLayout {
+    background: #fff;
+    box-shadow:0px 3px 3px #d9dce2;  
+    position: relative;
+    margin-bottom:3px;
+    color: #505763;
+}
+
+.HeaderLayout > div{
+    display: flex;
+    justify-content: space-between;
+    background: inherit;
+    box-sizing: border-box;
+    height: 65px;
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 20px;
+    position: relative;
+    
+}
+
+.HeaderLayout > div >div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*justify-content: center;*/
+}
+
+.HeaderLayout a{
+    text-decoration: none;
+    color: #505763;
+}
+
+.HeaderLayout i{
+    font-size:24px;
+}
+
+.HeaderLayout .inputClass >input{
+    width:400px;
+    height:40px;
+    background-color:#f2f3f5;
+    border:none;
+}
+
+.HeaderLayout .inputClass{
+    background-color:#f2f3f5;
+}
+
+.HeaderLayout .inputClass span{
+    width:40px;
+    color:red;
+    height:40px;
+    font-size:14px;
+    display:inline-block;
+}
+
+.HeaderLayout .inputClass i{
+    position:relative;
+    top:10%;
+    left:23%;
+    color:red
+}
+
+.HeaderLayout .inputClass span:hover{
+    background-color:red;
+    color:white;
+}
+
+.HeaderLayout .inputClass i:hover{
+    color:white;
+}

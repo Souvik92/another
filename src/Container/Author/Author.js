@@ -34,9 +34,14 @@ class Author extends Component{
     }
 
     componentDidMount = () =>{
-        axios.get('../../../testdata/author/1.json').then((res) => {
-            this.setState({author:res.data.author})
-            console.log(res.data);
+        axios.get('../../../testdata/authors/authors.json').then((res) => {
+            let author =res.data.find(el =>{
+                console.log(el.name.split(" ").join('').toLowerCase());
+                return el.name.split(" ").join('').toLowerCase() === this.props.match.params.id;
+            });
+            if(author){
+                this.setState({author:author})
+            }
         });
     }
 
@@ -71,29 +76,33 @@ class Author extends Component{
                         </div>                    
                     </header>
                     <div>
-                        <aside>
-                            <img src={require('../../Assets/AuthorImages/'+this.state.author.name.split(" ").join('').toLowerCase()+'.jpg')} alt="not available" />
-                            <div>{getIcons()}</div>
-                        </aside >
-                        <article>
-                            <p>{this.state.author.description.intro}</p>
-                            <p>{this.state.author.description.skills}</p>
-                            <p>{this.state.author.description.important}</p>
-                        </article>
-                        <footer>
-                            <div>
-                                <h3>Total students</h3>
-                                <p>680,272</p>
-                            </div>
-                            <div>
-                                <h3> Courses</h3>
-                                <p>9</p>
-                            </div>
-                            <div>
-                                <h3> Reviews</h3>
-                                <p>211.447</p>
-                            </div>
-                        </footer>
+                        <div>
+                            <aside>
+                                <img src={require('../../Assets/AuthorImages/'+this.state.author.name.split(" ").join('').toLowerCase()+'.jpg')} alt="not available" />
+                                <div>{getIcons()}</div>
+                            </aside >
+                        </div>
+                        <div>
+                            <article>
+                                <p>{this.state.author.description.intro}</p>
+                                <p>{this.state.author.description.skills}</p>
+                                <p>{this.state.author.description.important}</p>
+                            </article>
+                            <footer>
+                                <div>
+                                    <h3>Total students</h3>
+                                    <p>680,272</p>
+                                </div>
+                                <div>
+                                    <h3> Courses</h3>
+                                    <p>9</p>
+                                </div>
+                                <div>
+                                    <h3> Reviews</h3>
+                                    <p>211.447</p>
+                                </div>
+                            </footer>
+                        </div>
                     </div> 
                 </Aux>
 
