@@ -43,3 +43,9 @@
     cursor:pointer;
     /*color:white;*/
 }
+
+@media(max-width:1169px){
+    .ContentHeader {
+        display:none;
+    }  
+}

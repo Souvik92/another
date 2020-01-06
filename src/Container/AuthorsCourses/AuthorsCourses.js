@@ -264,16 +264,6 @@ componentWillUnmount() {
      upperLimit =2
      }
      this.setState({noOfElements : upperLimit});
-
-    /*if(width > 250){
-      this.setState({noOfElements:2})
-    }else if(width == 250){
-      this.setState({noOfElements:3})
-    }else if(width == 242){
-      this.setState({noOfElements:4})
-    }else if(width >= 234){
-      this.setState({noOfElements:5})
-    }*/
   }
   
   render() {
