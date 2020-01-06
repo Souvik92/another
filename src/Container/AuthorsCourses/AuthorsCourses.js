@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import Aux from '../../HOC/Auxilliary/Auxilliary';
+import React, { Component } from "react";
+import Aux from "../../HOC/Auxilliary/Auxilliary";
 //import classes from './ContentLayout.css';
-import ContentHeader from '../../Components/ContentHeader/ContentHeader';
-import classes from './AuthorsCourses.css'
-import PopularTopics from '../PopularTopics/PopularTopics';
-import PopularAuthors from '../../Container/PopularAuthors/PopularAuthors';
-import axios from 'axios';
+import ContentHeader from "../../Components/ContentHeader/ContentHeader";
+import classes from "./AuthorsCourses.css";
+import PopularTopics from "../PopularTopics/PopularTopics";
+import PopularAuthors from "../../Container/PopularAuthors/PopularAuthors";
+import axios from "axios";
 //import AuthorComponent from '../../Components/AuthorComponent/AuthorContainer';
 
 class AuthorsCourses extends Component {
@@ -189,73 +189,72 @@ class AuthorsCourses extends Component {
     authorID:null
   }*/
 
-  state={
-    authors:[],
-    categories:[],
-    noOfElements:0
-  }
+  state = {
+    authors: [],
+    categories: [],
+    noOfElements: 0
+  };
 
-  static getDerivedStateFromProps(props,state){
-    let windowWidth = document.getElementsByTagName('BODY')[0].clientWidth;
-   
+  static getDerivedStateFromProps(props, state) {
+    let windowWidth = document.getElementsByTagName("BODY")[0].clientWidth;
+
     let upperLimit = 0;
-    if(windowWidth>1200){
-      upperLimit  = 5
-    }else if(windowWidth>992){
-      upperLimit = 4
-    }else if(windowWidth>768){
-      upperLimit =3
-    }else{
-    upperLimit =2
+    if (windowWidth > 1200) {
+      upperLimit = 5;
+    } else if (windowWidth > 992) {
+      upperLimit = 4;
+    } else if (windowWidth > 768) {
+      upperLimit = 3;
+    } else {
+      upperLimit = 2;
     }
     /*console.log(upperLimit);
     console.log('hfsdhfshdfh');*/
-    state={
-      noOfElements : upperLimit
-    }
+    state = {
+      noOfElements: upperLimit
+    };
     return state;
   }
 
-  componentDidMount = () =>{
-    axios.get('../../../testdata/authors/authors.json').then((res) => {
-      this.setState({authors:res.data})
+  componentDidMount = () => {
+    axios.get("../../../testdata/authors/authors.json").then(res => {
+      this.setState({ authors: res.data });
       /*console.log(res.data)*/
     });
 
-    axios.get('../../../testdata/categories/categories.json').then((res) => {
-      this.setState({categories:res.data})
+    axios.get("../../../testdata/categories/categories.json").then(res => {
+      this.setState({ categories: res.data });
       /*console.log(res.data)*/
     });
-    window.addEventListener('resize',this.setNoOfElements);
-}
+    window.addEventListener("resize", this.setNoOfElements);
+  };
 
-  componentWillUnmount = ()  => {
-    window.removeEventListener('resize', null);
-  }
+  componentWillUnmount = () => {
+    window.removeEventListener("resize", null);
+  };
 
-
-  setNoOfElements= () => {
-    let windowWidth = document.getElementsByTagName('BODY')[0].clientWidth;    
+  setNoOfElements = () => {
+    let windowWidth = document.getElementsByTagName("BODY")[0].clientWidth;
     let upperLimit = 0;
-     if(windowWidth>1200){
-       upperLimit  = 5
-     }else if(windowWidth>992){
-       upperLimit = 4
-     }else if(windowWidth>768){
-       upperLimit =3
-     }else{
-     upperLimit =2
-     }
-     this.setState({noOfElements : upperLimit});
-  }
-  
+    if (windowWidth > 1200) {
+      upperLimit = 5;
+    } else if (windowWidth > 992) {
+      upperLimit = 4;
+    } else if (windowWidth > 768) {
+      upperLimit = 3;
+    } else {
+      upperLimit = 2;
+    }
+    this.setState({ noOfElements: upperLimit });
+  };
+
   render() {
     let authorsCoursesHTML = null;
-    if((this.state.categories.length > 0) && (this.state.authors.length > 0)){
+    if (this.state.categories.length > 0 && this.state.authors.length > 0) {
       authorsCoursesHTML = (
         <Aux>
-            <ContentHeader categories={this.state.categories} />
-            {/*<div>
+          <ContentHeader categories={this.state.categories} />
+          {/*<div>
                 <ContentHeader categories={this.state.categories} />
                     <button onClick={this.myName}>Press me</button>
                     <button onClick={this.showMe}>Show me</button>
@@ -268,27 +267,26 @@ class AuthorsCourses extends Component {
                     <PopularInstructors authors={this.state.authors} activateAuthor={(id) => this.showAuthorHandle(id)}/>
                 </div>
             </div>};*/}
-            <div className={classes.AuthorsCourses}>
-              <div /*style={{'backgroundColor':'yellow'}}*/>
-                  <h2>Popular topics</h2>
-                  <PopularTopics categories={this.state.categories} noOfElements={this.state.noOfElements}/>
-              </div>
-              <div style={{/*'backgroundColor':'pink',*/'marginTop':'30px'}}>
-                  <h2>Popular Instructors</h2>
-                  <PopularAuthors authors={this.state.authors} noOfElements={this.state.noOfElements} />
-              </div>
+          <div className={classes.AuthorsCourses}>
+            <div /*style={{'backgroundColor':'yellow'}}*/>
+              <h2>Popular topics</h2>
+              <PopularTopics
+                categories={this.state.categories}
+                noOfElements={this.state.noOfElements}
+              />
             </div>
-            
+            <div style={{ /*'backgroundColor':'pink',*/ marginTop: "30px" }}>
+              <h2>Popular Instructors</h2>
+              <PopularAuthors
+                authors={this.state.authors}
+                noOfElements={this.state.noOfElements}
+              />
+            </div>
+          </div>
         </Aux>
-
-      )
+      );
     }
-    return (
-      <Aux>         
-            {authorsCoursesHTML}
-      </Aux>
-        
-    );
+    return <Aux>{authorsCoursesHTML}</Aux>;
   }
 }
 

@@ -55,48 +55,6 @@
         "important": "Do you want to learn how to build awesome websites with advanced HTML and CSS? Looking for a complete JavaScript course that takes you from beginner to advanced developer?"
       },
       "topics": ["JavaScript", "CSS"]
-    },
-    {
-      "name": "Stephen Grider",
-      "title": "Engineering Architect",
-      "social": {
-        "twitter": "https://twitter.com/ste_grider",
-        "youTube": "https://www.youtube.com/channel/UCQCaS3atWyNHEy5PkDXdpNg"
-      },
-      "description": {
-        "intro": "Stephen Grider has been building complex Javascript front ends for top corporations in the San Francisco Bay Area.",
-        "skills": "With an innate ability to simplify complex topics, Stephen has been mentoring engineers beginning their careers in software development for years, and has now expanded that experience onto Udemy, authoring the highest rated React course. He teaches on Udemy to share the knowledge he has gained with other software engineers.",
-        "important": "Invest in yourself by learning from Stephen's published courses."
-      },
-      "topics": ["Angular", "JavaScript"]
-    },
-    {
-      "name": "Stephen Grider",
-      "title": "Engineering Architect",
-      "social": {
-        "twitter": "https://twitter.com/ste_grider",
-        "youTube": "https://www.youtube.com/channel/UCQCaS3atWyNHEy5PkDXdpNg"
-      },
-      "description": {
-        "intro": "Stephen Grider has been building complex Javascript front ends for top corporations in the San Francisco Bay Area.",
-        "skills": "With an innate ability to simplify complex topics, Stephen has been mentoring engineers beginning their careers in software development for years, and has now expanded that experience onto Udemy, authoring the highest rated React course. He teaches on Udemy to share the knowledge he has gained with other software engineers.",
-        "important": "Invest in yourself by learning from Stephen's published courses."
-      },
-      "topics": ["Angular", "JavaScript"]
-    },
-    {
-      "name": "Jonas Schmedtmann",
-      "title": "Academind by Maximilian Schwarzmüller",
-      "social": {
-        "website": "http://jonas.io/",
-        "twitter": "https://twitter.com/jonasschmedtman"
-      },
-      "description": {
-        "intro": "Hi, I'm Jonas! I have been identified as one of Udemy's Top Instructors and all my premium courses have recently earned the best-selling status for outstanding performance and student satisfaction.",
-        "skills": "I'm a full-stack web developer and designer with a passion for building beautiful things from scratch. I've been building websites and apps since 2007 and also have a Masters degree in Engineering.",
-        "important": "Do you want to learn how to build awesome websites with advanced HTML and CSS? Looking for a complete JavaScript course that takes you from beginner to advanced developer?"
-      },
-      "topics": ["JavaScript", "CSS"]
     }
   ]
   

@@ -11,8 +11,9 @@ function App() {
       <div className={classes.App}> 
           <BrowserRouter>
             <Layout>
-              <Route path="/" exact component={AuthorsCourses}/>
+              
               <Route path="/author/:id" component={Author}/>
+              <Route path="/" exact component={AuthorsCourses}/>
               {/*<Route path="/" exact component={}/>*/}
 
             </Layout>
