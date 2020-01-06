@@ -97,7 +97,7 @@ class Populartopics extends Component {
 
         let finalHTML = allHTML.map(elements =>{
             return (
-                <Card>
+                <Card key={elements[0]}>
                     <div>{elements[0]}</div>
                     <div>{elements[1]}</div>
                 </Card>

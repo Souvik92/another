@@ -19,7 +19,7 @@ class HeaderLayout extends Component {
       </div>
       <div>
           <div>
-            <i class="fa fa-tasks"></i>
+            <i className="fa fa-tasks"></i>
             <span>Categories</span>
           </div>          
       </div>
@@ -39,26 +39,26 @@ class HeaderLayout extends Component {
       </div>
       <div>
           <div>
-            <Link>Udemy for Business</Link>
+            <Link to='/'>Udemy for Business</Link>
           </div>          
       </div>
       <div>
           <div>
-            <Link>Teach on Udemy</Link>
+            <Link to='/'>Teach on Udemy</Link>
           </div>    
       </div>
       <div>
           <div>
-            <Link>My courses</Link>
+            <Link to='/'>My courses</Link>
           </div> 
       </div>
-      <div>
+      <div className={classes.cartArea}>
         <div>
           <span>
-            <Link><i class="fa fa-shopping-cart"></i></Link>
+            <Link to='/'><i className="fa fa-shopping-cart"></i></Link>
           </span>
-          <Link>Login</Link>
-          <Link>SignUp</Link>
+          <Link to='/'>Login</Link>
+          <Link to='/'>SignUp</Link>
         </div> 
       </div>
     </div>

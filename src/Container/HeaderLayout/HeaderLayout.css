@@ -69,3 +69,23 @@
 .HeaderLayout .inputClass i:hover{
     color:white;
 }
+
+.HeaderLayout .cartArea div {
+    width:200px;
+    display:flex;
+    justify-content: space-between;
+}
+
+@media (max-width:1336px){
+    .HeaderLayout div > div{
+        display:none;
+        background: #fff;
+    } 
+
+    .HeaderLayout div > div:first-child{
+        display:flex;
+        margin:0px auto;
+    }
+
+
+}

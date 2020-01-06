@@ -37,12 +37,12 @@ class PopularAuthor extends Component{
     }
 
     static getDerivedStateFromProps(props,state){
-        console.log(props.windowWidth);
-        console.log("Popular authors get derieved state from props");
+        /*console.log(props.windowWidth);
+        console.log("Popular authors get derieved state from props");*/
         state ={
             nextPointer:state.prevPointer+(props.noOfElements)
         }
-        console.log(state.nextPointer);
+        /*console.log(state.nextPointer);*/
         return state;
     }
 

@@ -1,5 +1,5 @@
 .Author{
-    
+    box-sizing: border-box; 
 }
 
 
@@ -11,39 +11,85 @@
     line-height: 1.43;
 }
 
-.Author >div{
-    display:flex;
-    padding:25px 0px 0px 0px
+.Author > div{
+    width: 85%;
+    margin:0px auto;
 }
 
 
+.Author h2{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.287;
+    margin: 7px 0 0;
+}
+
+.Author h1{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.287;
+    margin: 0;
+}
+
+.Author header>div{
+    width: 85%;
+    margin:0px auto;        
+    padding: 34px 15px;
+    /*display: table;
+    table-layout: fixed;*/
+}
+
+.Author footer{
+    display:flex;
+    margin-top:30px;
+    margin-bottom:10px;
+    box-shadow: border-box;
+}
+
+.Author footer>div{
+    border-left:1px solid #000000;
+    padding:0px 10px;
+    text-align: center;
+    align-items: center;
+}
+
+
+.Author footer h3{
+    padding:0px;
+    margin:0px;
+    font-size: 86%;
+}
+   
+
+.Author footer p{
+    padding:0px;
+    margin:0px;
+    font-size: 24px;
+}
+
+.Author img{
+    height:120px;
+    width:120px;
+    border-radius:50%;
+    border:0px;
+    /*display:block;*/
+    margin:0px auto 20px;
+}
+
 @media (min-width: 1200px){
+    .Author >div{
+        display:flex;
+        padding:25px 0px 0px 0px;
+    }
+
     .Author header>div{
         width: 1000px;
-        margin:0px auto;        
-        padding: 34px 15px;
-        display: table;
-        table-layout: fixed;
-        box-sizing: border-box;
     }
 
-    .Author h2{
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.287;
-        margin: 7px 0 0;
-    }
 
-    .Author h1{
-        font-size: 30px;
-        font-weight: 400;
-        line-height: 1.287;
-        margin: 0;
-    }
 
     .Author > div{
         width: 1000px;
-        margin:0px auto;
     }
 
     .Author aside{
@@ -59,44 +105,6 @@
         margin:0px auto;
         
     }
-
-    .Author img{
-        height:120px;
-        width:120px;
-        border-radius:50%;
-        border:0px;
-        /*display:block;*/
-        margin:0px auto 20px;
-    }
-
-    .Author footer{
-        display:flex;
-        margin-top:30px;
-        margin-bottom:10px;
-        box-shadow: border-box;
-    }
-
-    .Author footer>div{
-        border-left:1px solid #000000;
-        padding:0px 10px;
-        text-align: center;
-        align-items: center;
-    }
-
-
-    .Author footer h3{
-        padding:0px;
-        margin:0px;
-        font-size: 86%;
-    }
-       
-
-    .Author footer p{
-        padding:0px;
-        margin:0px;
-        font-size: 24px;
-    }
-
 
 }
 

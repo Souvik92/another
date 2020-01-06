@@ -16,6 +16,12 @@
     box-shadow:0px 1px 1px #d9dce2; 
 }
 
+.PopularTopics >div >div:hover{
+    box-shadow:0px 2px 5px #a7aaaf;
+    cursor:pointer;
+}
+
+
 /*
 
 .right-arrow{

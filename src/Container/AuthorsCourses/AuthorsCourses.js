@@ -195,15 +195,6 @@ class AuthorsCourses extends Component {
     noOfElements:0
   }
 
-  /*myName = () => {
-    let arr = [];
-    arr.push(this.state.categories.map(el => {
-       return el["sub-category"];
-    }));
-    this.setState({headerInfo:arr});
-    
-  }*/
-
   static getDerivedStateFromProps(props,state){
     let windowWidth = document.getElementsByTagName('BODY')[0].clientWidth;
    
@@ -217,8 +208,8 @@ class AuthorsCourses extends Component {
     }else{
     upperLimit =2
     }
-    console.log(upperLimit);
-    console.log('hfsdhfshdfh');
+    /*console.log(upperLimit);
+    console.log('hfsdhfshdfh');*/
     state={
       noOfElements : upperLimit
     }
@@ -228,28 +219,20 @@ class AuthorsCourses extends Component {
   componentDidMount = () =>{
     axios.get('../../../testdata/authors/authors.json').then((res) => {
       this.setState({authors:res.data})
-      console.log(res.data)
+      /*console.log(res.data)*/
     });
 
     axios.get('../../../testdata/categories/categories.json').then((res) => {
       this.setState({categories:res.data})
-      console.log(res.data)
+      /*console.log(res.data)*/
     });
-
     window.addEventListener('resize',this.setNoOfElements);
 }
 
-componentWillUnmount() {
-  window.removeEventListener('resize', null);
-}
-
-  showAuthorHandle = (id) => {
-    let author =this.state.authors.find(author => author.name === id);
-    console.log(author.name);
-    if(author){
-      this.setState({AuthorID:author});
-     }
+  componentWillUnmount = ()  => {
+    window.removeEventListener('resize', null);
   }
+
 
   setNoOfElements= () => {
     let windowWidth = document.getElementsByTagName('BODY')[0].clientWidth;    
